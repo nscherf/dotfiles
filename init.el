@@ -10,7 +10,7 @@
 ;; (setq visible-bell t) ;visible bell on macOS is annoying
 
 ;; set face and colours
-(set-face-attribute 'default nil :font "Fira Code" :weight 'light' :height 140)
+(set-face-attribute 'default nil :font "Fira Code" :weight 'light' :height 128)
 (load-theme 'tango-dark)
 
 
@@ -51,7 +51,6 @@
 (use-package command-log-mode)
 
 (use-package ivy
-  ;; :dimish ; in case you don't want to have ivy mentioned in the mode line
   :bind (("C-s" . swiper)
 	 :map ivy-minibuffer-map
 	 ("TAB" . ivy-alt-done)
@@ -72,3 +71,11 @@
   :ensure t
   :init (doom-modeline-mode 1))
 
+(column-number-mode)
+(global-display-line-numbers-mode t)
+
+;; disable line numbers for some modes
+(dolist (mode '(org-mode-hook
+		term-mode hook
+		eshell-mode-hook))
+  (add-hook mode (lambda () (display-line-numbers-mode 0))))
