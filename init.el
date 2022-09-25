@@ -86,4 +86,4 @@
 ;; globally replace list-buffers with the more extensive ibuffer when using C-x C-b
 (global-set-key [remap list-buffers] 'ibuffer)
 
-
+;; test comment to see if ln -s has worked correctly
