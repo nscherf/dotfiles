@@ -9,9 +9,11 @@
 
 ;; (setq visible-bell t) ;visible bell on macOS is annoying
 
+(global-set-key (kbd "M-o") 'other-window)
+
 ;; set face and colours
 (set-face-attribute 'default nil :font "Fira Code" :weight 'light' :height 128)
-(load-theme 'tango-dark)
+(load-theme 'spacemacs-dark)
 
 
 ;; initialize package sources
@@ -39,10 +41,11 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(custom-safe-themes
+   '("fa2b58bb98b62c3b8cf3b6f02f058ef7827a8e497125de0254f56e373abee088" "bffa9739ce0752a37d9b1eee78fc00ba159748f50dc328af4be661484848e476" "dea4b7d43d646aa06a4f705a58f874ec706f896c25993fcf73de406e27dc65ba" default))
  '(fido-mode t)
  '(fido-vertical-mode t)
- ;; if you want to use ivy, put ivy back to the list of selected packages
- '(package-selected-packages '(doom-modeline use-package)))
+ '(package-selected-packages '(spacemacs-theme zenburn-theme doom-modeline use-package)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
