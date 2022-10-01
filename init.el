@@ -13,7 +13,7 @@
 
 ;; set face and colours
 (set-face-attribute 'default nil :font "Fira Code" :weight 'light' :height 128)
-
+(load-theme 'spacemacs-dark)
 
 
 ;; initialize package sources
@@ -45,8 +45,7 @@
    '("fa2b58bb98b62c3b8cf3b6f02f058ef7827a8e497125de0254f56e373abee088" "bffa9739ce0752a37d9b1eee78fc00ba159748f50dc328af4be661484848e476" "dea4b7d43d646aa06a4f705a58f874ec706f896c25993fcf73de406e27dc65ba" default))
  '(fido-mode t)
  '(fido-vertical-mode t)
- '(package-selected-packages
-   '(citar-org-roam spacemacs-theme zenburn-theme doom-modeline use-package)))
+ '(package-selected-packages '(spacemacs-theme zenburn-theme doom-modeline use-package)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -78,8 +77,6 @@
   :ensure t
   :init (doom-modeline-mode 1))
 
-(load-theme 'spacemacs-dark)
-
 (column-number-mode)
 (global-display-line-numbers-mode t)
 
@@ -92,4 +89,4 @@
 ;; globally replace list-buffers with the more extensive ibuffer when using C-x C-b
 (global-set-key [remap list-buffers] 'ibuffer)
 
-;; test comment to see if ln -s has worked correctly
+(global-tab-line-mode t)
