@@ -90,3 +90,6 @@
 (global-set-key [remap list-buffers] 'ibuffer)
 
 (global-tab-line-mode t)
+
+;; disable that emacs expects a sentence to end in a double space
+(setq sentence-end-double-space nil)
