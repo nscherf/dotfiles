@@ -15,12 +15,6 @@
 ;; delete selection when entering text
 (setq delete-selection-mode t)
 
-
-;; set face and colours
-(set-face-attribute 'default nil :font "Fira Code" :weight 'light' :height 128)
-(load-theme 'spacemacs-dark)
-
-
 ;; initialize package sources
 (require 'package)
 
@@ -131,5 +125,10 @@
 ;;   (global-set-key (kbd "s-<right>") 'end-of-line)
 ;;   (global-set-key [(meta down)]     'forward-paragraph)
 ;;   (global-set-key [(meta up)]       'backward-paragraph)
+
+
+;; set face and colours
+(set-face-attribute 'default nil :font "Fira Code" :weight 'light' :height 128)
+(load-theme 'spacemacs-dark)
 
 
